@@ -5,5 +5,14 @@
     <string name="main_save">Save</string>
     <string name="main_saved_succesfully">Student saved successfully</string>
     <string name="main_error_saving">Error saving student</string>
+    <string name="url">(url)</string>
+    <string name="web">Web</string>
+    <string name="address">(address)</string>
+    <string name="phone">(phone)</string>
+    <string name="phone_number">Phone number</string>
+    <string name="email">(email)</string>
+    <string name="lblEmail">email</string>
+    <string name="name">(name)</string>
+    <string name="lblName">Name</string>
     <!-- END DO NOT TOUCH -->
 </resources>

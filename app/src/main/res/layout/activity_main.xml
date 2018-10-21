@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -8,5 +9,197 @@
     Use android:tint="@color/color_state_selector" in ImageViews corresponding to Icons
     Use android:textColor="@color/color_state_selector" in TextViews acting as labels.
     -->
+
+    <ImageView
+        android:id="@+id/imgAvatar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="TODO"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblAvatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/colorError"
+        android:labelFor="@+id/imgAvatar"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/imgAvatar"
+        app:layout_constraintEnd_toEndOf="@+id/imgAvatar"
+        tools:backgroundTintMode="screen" />
+
+    <TextView
+        android:id="@+id/lblName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:labelFor="@id/txtName"
+        android:text="@string/lblName"
+        android:textColor="@color/color_state_selector"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgAvatar" />
+
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="320dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblName"
+        android:imeOptions="actionNext"
+        android:nextFocusDown="@id/txtPhonenumber"/>
+
+    <TextView
+        android:id="@+id/lblEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:labelFor="@+id/txtEmail"
+        android:text="@string/lblEmail"
+        android:textColor="@color/color_state_selector"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+    <EditText
+        android:id="@+id/txtEmail"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblEmail"
+        android:imeOptions="actionNext"/>
+
+    <ImageView
+        android:id="@+id/imgEmail"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="42dp"
+        android:tint="@color/color_state_selector"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/txtEmail"
+        app:layout_constraintTop_toBottomOf="@+id/txtName"
+        app:srcCompat="@drawable/ic_email_24dp" />
+
+    <TextView
+        android:id="@+id/lblPhonenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="16dp"
+        android:labelFor="@id/txtPhonenumber"
+        android:text="@string/phone_number"
+        android:textColor="@color/color_state_selector"
+        app:layout_constraintStart_toEndOf="@+id/lblEmail"
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+    <EditText
+        android:id="@+id/txtPhonenumber"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="50dp"
+        android:ems="10"
+        android:hint="@string/phone"
+        android:inputType="phone"
+        app:layout_constraintStart_toEndOf="@+id/txtEmail"
+        app:layout_constraintTop_toBottomOf="@+id/lblPhonenumber"
+        android:imeOptions="actionNext"/>
+
+    <ImageView
+        android:id="@+id/imgPhonenumber"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="42dp"
+        android:tint="@color/color_state_selector"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/txtPhonenumber"
+        app:layout_constraintTop_toBottomOf="@+id/txtName"
+        app:srcCompat="@drawable/ic_call_24dp" />
+
+    <TextView
+        android:id="@+id/lblAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:labelFor="@id/txtAddress"
+        android:text="Address"
+        android:textColor="@color/color_state_selector"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+
+    <EditText
+        android:id="@+id/txtAddress"
+        android:layout_width="290dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:hint="@string/address"
+        android:inputType="textPostalAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblAddress"
+        android:imeOptions="actionNext"/>
+
+    <ImageView
+        android:id="@+id/imgAddress"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="42dp"
+        android:tint="@color/color_state_selector"
+        app:layout_constraintStart_toEndOf="@+id/txtAddress"
+        app:layout_constraintTop_toBottomOf="@+id/txtPhonenumber"
+        app:srcCompat="@drawable/ic_map_24dp" />
+
+    <TextView
+        android:id="@+id/lblWeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:labelFor="@id/txtWeb"
+        android:text="@string/web"
+        android:textColor="@color/color_state_selector"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAddress" />
+
+    <EditText
+        android:id="@+id/txtWeb"
+        android:layout_width="290dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:hint="@string/url"
+        android:inputType="textWebEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblWeb"
+        android:imeOptions="actionDone"/>
+
+    <ImageView
+        android:id="@+id/imgWeb"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="42dp"
+        android:tint="@color/color_state_selector"
+        app:layout_constraintStart_toEndOf="@+id/txtWeb"
+        app:layout_constraintTop_toBottomOf="@+id/txtAddress"
+        app:srcCompat="@drawable/ic_web_24dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
